@@ -5,9 +5,12 @@
     color:aliceblue;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    
 }
 button{
     background-color:#3c4444;
+    
+    
 }
 ul{
     list-style: none;
@@ -16,7 +19,26 @@ a{
     text-decoration: none;
 }
 body{
-    background: linear-gradient(180deg,#3c3c44,#3c4444 , #00adb5)
+    background: linear-gradient(180deg,#3c3c44,#3c4444 , #00adb5) fixed;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    max-width: 100px;
+}
+header ul{
+    display: flex;
+}
+header ul a{
+    padding: 15px;
+    transition: 30ms;
+}
+header ul a:hover{
+    color: #00adb5;
 }
 .container .name h1{
     
@@ -35,13 +57,113 @@ body{
     min-width: none;
     margin: 0 auto;
  }
- form{
-    width: 40%;
+ .arrow{
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+    @keyframes blink{
+        to{
+            visibility: hidden;
+        }
+    }
+    .rotate{
+        transform: rotate(180deg);
+        transition: 300ms;
+    }
+    #animation{
+        transition: 300ms;
+    }
+ #form{
+     width: 40%;
     margin: 0 auto;
+    text-align: center;
+    
  }
- form .input{
+ #form input{
      width: 50%;
+     padding: 5px 5px;
+     border: none;
+     border-radius: 5px, 0px, 0px, 5px;
  }
- form button{
-    width: 10%;
+ #form button{
+
+    width: 15%;
+    cursor: pointer;
+    background-color: #3c4444;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 0px, 5px, 5px, 0px;
+    margin-left: -5px;
+
+}
+#form button:hover{
+
+    background-color: #090e0e;
+    
+
+}
+.active{
+    
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.portifolio{
+    
+    margin: 2% auto;
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+       
+    
+}
+.portifolio div{
+    
+   margin: 10px;
+}
+
+.portifolio img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 480px){
+
+    #sobre{
+     
+        max-width: 80%;
+     }
+     #form button{
+
+        width: 25%;
+     }
+     #form input{
+        width: 70%;
+    }
+    header{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 470px){
+
+    header{
+        width: 100%;
+    }
+    #sobre{
+     
+        max-width: 80%;
+     }
+     #form button{
+
+        width: 30%;
+     }
+     #form input{
+        width: 75%;
+    }
+
 }

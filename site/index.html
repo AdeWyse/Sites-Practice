@@ -13,7 +13,7 @@
 <body>
     <header>
         <div>
-            <img src="image/logo.png" alt="image/logo_transparent.png">
+            <a href="index.html"><img src="image/logo.png" alt="image/logo_transparent.png"></a>
         </div>
         <ul>
             <a target="_blank" href="https://github.com/AdeWyse"> Github</a>
@@ -28,12 +28,33 @@
                 <h5>Developer</h5>
             </div>
 
-            <div id = "arrow">
-                <i class="fas fa-sort-down"></i>
-            </div>
+            
             <div id = "sobre">
                 <p>Estudante de Engenharia de Software pela UTFPR-CP.  Adoro criar coisas novas e passo horas e horas programando.</p>
             </div>
+           
+        </section>
+        <section class="arrow">
+                <i onclick= displayAbout() id= "animation"class="fas fa-sort-down"></i>
+        </section>
+        <section  class="portifolio">
+            
+            <div style="display: none;" id="test">
+                <div id ="p1">
+                     <a href="https://github.com/AdeWyse/Unity-UI-Practice"><img src="image/MenuLight.png" alt="Game Title Light Theme"> <br></a>
+                    <P>Desing de tela inicial de um jogo com tema claro.</P>
+                </div>
+                <div id = "p2">
+                    <a href="https://github.com/AdeWyse/Unity-UI-Practice"><img src="image/MenuDark.png" alt="Game Title Dark Theme"><br></a>
+                    <P>Desing de tela inicial de um jogo com tema escuro.</P>
+                </div>
+                <div id = "p3">
+                    
+                    <a href="https://github.com/AdeWyse/FLBC"><img src="image/title.png" alt="Clone do Flapy Bird Title"><br></a>
+                    <p>Clone do Flappy Bird.</p>
+                </div> 
+            </div>
+            
             <div id = "form">
                 <div>
                     <p>Entre em contato!</p>
@@ -41,21 +62,18 @@
                 <input type="text" placeholder="Deixe seu email">
                 <button>Enviar</button>
             </div>
-        </section class="portifolio">
-            <div id ="p1">
-
-            </div>
-            <div id = "p2">
-
-            </div>
-            <div id = "p3">
-
-            </div>
-
-        <section>
-
-
+            
         </section>
     </main>
+    <script>
+        function displayAbout()
+        {
+            var arrow = document.getElementById("animation");
+            arrow.classList.toggle('rotate');
+            var port = document.getElementById ("test")
+            port.classList.toggle('active');
+        }
+        
+    </script>
 </body>
 </html>
